@@ -18,8 +18,10 @@
         "method": "POST",
         "header": [{ "key": "Content-Type", "value": "application/json" }],
         "url": "http://127.0.0.1:8099/analyze/",
-        "body": { "mode": "raw",
-          "raw": "{\"text\":\"click here to win free crypto!\",\"lang\":\"en\"}" }
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"click here to win free crypto!\",\"lang\":\"en\"}"
+        }
       }
     }
   ]
