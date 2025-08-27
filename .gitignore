@@ -1,30 +1,27 @@
 # Python
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
 *.pyd
-*.so
+*.log
 
-# Virtual envs
+# venvs
 venv/
-.venv*/
+.venv/
+.venv_*/
 env/
 ENV/
 
-# Runtime / logs
-run/
-.run/
-*.log
-
-# Builds / dists / releases
+# Build artifacts
 dist/
 build/
 *.egg-info/
-release/*.zip
-release/*.sha256
 
-# IDE / OS
-.vscode/
-.idea/
+# Local runtime
+run/api.log
+run/*.pid
+
+# OS / Editors
 .DS_Store
-Thumbs.db
+.idea/
+.vscode/
