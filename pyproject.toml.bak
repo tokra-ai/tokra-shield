@@ -1,0 +1,23 @@
+[project]
+name = "tokra-shield"
+version = "0.1.0"
+description = "Lightweight, dependency-free content-protection SDK"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+keywords = ["content-safety", "spam", "scam", "prompt-injection"]
+dependencies = []
+
+[project.optional-dependencies]
+api = ["fastapi>=0.115", "uvicorn>=0.30"]
+dev = ["pytest>=7", "httpx>=0.27"]
+
+[project.scripts]
+tokra-shield = "tokra_shield.cli:main"
+
+[tool.setuptools]
+packages = ["tokra_shield"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+tokra_shield = ["ghost/*.json"]

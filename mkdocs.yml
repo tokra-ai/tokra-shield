@@ -1,0 +1,6 @@
+site_name: Tokra Shield
+theme:
+  name: material
+nav:
+  - Home: docs/index.md
+  - Usage: docs/usage.md

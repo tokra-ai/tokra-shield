@@ -1,0 +1,5 @@
+{
+  "click here":               { "type": "spam",      "risk": 10 },
+  "free crypto":              { "type": "scam",      "risk": 20 },
+  "ignore previous instructions": { "type": "injection", "risk": 30 }
+}

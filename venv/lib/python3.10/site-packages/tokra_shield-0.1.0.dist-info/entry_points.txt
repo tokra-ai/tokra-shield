@@ -1,0 +1,2 @@
+[console_scripts]
+tokra-shield = tokra_shield.cli:main

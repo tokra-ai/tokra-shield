@@ -1,0 +1,12 @@
+Quick Start
+-----------
+Linux/macOS:
+  bash install_tokra.sh
+  source tokra_shield_env/bin/activate
+  tokra-shield hello
+  tokra-shield run   # REST on :8099
+
+Windows:
+  install-tokra.bat
+  tokra-shield hello
+  tokra-shield run

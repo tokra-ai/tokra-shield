@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.build/
+dist/
+build/
+*.egg-info/
+.run/
+run/api.log
+release/*.zip
+release/*.sha256

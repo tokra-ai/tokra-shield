@@ -1,0 +1,26 @@
+{
+  "info": {
+    "name": "Tokra Shield",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": { "method": "GET", "url": "http://127.0.0.1:8099/healthz" }
+    },
+    {
+      "name": "Version",
+      "request": { "method": "GET", "url": "http://127.0.0.1:8099/version" }
+    },
+    {
+      "name": "Analyze (EN)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "http://127.0.0.1:8099/analyze/",
+        "body": { "mode": "raw",
+          "raw": "{\"text\":\"click here to win free crypto!\",\"lang\":\"en\"}" }
+      }
+    }
+  ]
+}
