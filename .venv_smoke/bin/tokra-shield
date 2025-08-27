@@ -1,7 +1,0 @@
-#!/home/ubuntu/tokra_shield_pkg/.venv_smoke/bin/python
-import sys
-from tokra_shield.cli import main
-if __name__ == '__main__':
-    if sys.argv[0].endswith('.exe'):
-        sys.argv[0] = sys.argv[0][:-4]
-    sys.exit(main())
