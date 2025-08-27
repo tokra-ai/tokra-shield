@@ -1,0 +1,75 @@
+TOKRA SHIELD — Full Guide (Text)
+================================
+
+Overview:
+- Lightweight content-protection SDK + optional REST API
+- Categories: spam, scam, prompt-injection, unsafe patterns
+- Customizable rules, multi-language, risk weights & thresholds
+
+Quick Start (CLI):
+- tokra-shield hello
+- tokra-shield check "click here to win free crypto!" --lang en
+- tokra-shield run  # REST on :8099
+
+Install:
+- pip install tokra-shield
+- pip install "tokra-shield[api]"
+- Windows (best): pipx install "tokra-shield[api]"
+- Or: bash install_tokra.sh (creates venv + installs + verifies)
+
+REST Endpoints:
+- GET /healthz  -> {"ok": true}
+- GET /version  -> {"version":"..."}
+- POST /analyze/  body: {"text","lang","mode?","explain?":true}
+
+ENV:
+- TOKRA_SHIELD_MODE = off|low|balanced|strict|paranoid
+- TOKRA_SHIELD_THRESH_FLAG / TOKRA_SHIELD_THRESH_BLOCK
+- TOKRA_SHIELD_WEIGHT_SPAM / _SCAM / _INJECTION
+- TOKRA_SHIELD_CAP
+- TOKRA_SHIELD_MAX_BODY (default 65536)
+- TOKRA_SHIELD_RULES_DIR
+- TOKRA_SHIELD_BANNER_FONT / _WIDTH / _MARGIN / _PLAIN_BANNER
+
+External Rules (Ghost):
+- tokra-shield init --dir ./my_rules/ghost --lang en ar
+- export TOKRA_SHIELD_RULES_DIR=$PWD/my_rules/ghost
+- tokra-shield rules-stats
+
+Self-check & Tests:
+- bash scripts/self_check.sh
+- pytest -q
+
+Systemd (Linux):
+- /etc/systemd/system/tokra-shield.service with ExecStart:
+  tokra-shield run --host 0.0.0.0 --port 8099 --log-level info
+- systemctl daemon-reload && enable --now tokra-shield
+
+Docker:
+- Build from wheel then docker build -t tokra/tokra-shield:0.1 .
+- docker run -p 8099:8099 -e TOKRA_SHIELD_MODE=balanced tokra/tokra-shield:0.1
+
+Postman:
+- Import tools/TokraShield.postman_collection.json
+
+Release & Publishing:
+- Set GitHub Secret: PYPI_API_TOKEN
+- git tag -a vX.Y.Z -m "Tokra Shield vX.Y.Z" && git push origin vX.Y.Z
+- CI builds, uploads to PyPI, creates GitHub Release (dist + zip)
+
+Repository Maintenance:
+- Never commit venv/dist/build; use .gitignore
+- After history rewrite:
+  git fetch --all --prune
+  git reset --hard origin/main
+  git clean -fd
+
+Development:
+- python -m venv venv && . venv/bin/activate
+- pip install -e ".[api]" pytest
+- pytest -q && bash scripts/self_check.sh
+
+Security:
+- Report to security@tokra.ai (ack in 48h)
+
+License: Apache-2.0
