@@ -1,3 +1,5 @@
+![License](https://img.shields.io/badge/license-Apache--2.0-blue)
+
 ![CI](https://github.com/tokra-ai/tokra-shield/actions/workflows/ci.yml/badge.svg)  ![PyPI](https://img.shields.io/pypi/v/tokra-shield)
 
 # TOKRA SHIELD
