@@ -1,3 +1,5 @@
+![CI](https://github.com/tokra-ai/tokra-shield/actions/workflows/ci.yml/badge.svg)  ![PyPI](https://img.shields.io/pypi/v/tokra-shield)
+
 # TOKRA SHIELD
 
 Lightweight content‑protection SDK and optional REST API.
