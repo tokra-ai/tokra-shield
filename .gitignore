@@ -1,27 +1,22 @@
-# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 *.log
 
-# venvs
 venv/
 .venv/
 .venv_*/
 env/
 ENV/
 
-# Build artifacts
 dist/
 build/
 *.egg-info/
 
-# Local runtime
 run/api.log
 run/*.pid
 
-# OS / Editors
 .DS_Store
 .idea/
 .vscode/
