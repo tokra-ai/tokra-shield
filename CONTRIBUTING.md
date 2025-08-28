@@ -17,3 +17,7 @@ Code style
 Keep modules small and pure.
 
 Avoid heavy dependencies.
+
+## Developer Certificate of Origin (DCO)
+All commits should contain a `Signed-off-by: Your Name <email>` line.  
+You can add it automatically using `git commit -s ...`.
