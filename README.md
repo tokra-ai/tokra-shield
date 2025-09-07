@@ -1,3 +1,6 @@
+**Tagline**: Open-source, in-band policy firewall for AI. No sidecars. Zero-leak.
+**CTA**: ⭐ Star • 🐛 Issues • 🔁 PRs welcome
+
 > Full text guide: [docs/TOKRA_SHIELD_GUIDE.txt](docs/TOKRA_SHIELD_GUIDE.txt)
 
 # TOKRA SHIELD
