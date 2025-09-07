@@ -49,7 +49,7 @@
 ```bash
 tokra-shield hello
 
-tokra-shield check "click here to win free crypto!" --lang en
+tokra-shield check "reset your password here" --lang en
 
 tokra-shield run
 #   GET  http://127.0.0.1:8099/healthz
